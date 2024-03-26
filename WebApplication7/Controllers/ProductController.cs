@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using WebApplication7.Models;
 using WebApplication7.Services.Products;
 
@@ -6,6 +7,7 @@ namespace WebAplication7.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize] 
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;

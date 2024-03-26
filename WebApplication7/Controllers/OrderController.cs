@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApplication7.Models;
 using WebApplication7.Services.Orders;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace WebAplication7.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class OrderController : ControllerBase
     {
         private readonly IOrderService _orderService;
